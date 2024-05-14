@@ -1,5 +1,6 @@
 requires 'perl', '5.008001';
 requires 'App::cpanminus';
+`cpanm https://github.com/localh0rst/OpenSearch-Perl.git`;
 #requires 'https://github.com/localh0rst/OpenSearch-Perl.git';
 # There sure is a better way to do this...
 
