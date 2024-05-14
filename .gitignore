@@ -28,7 +28,7 @@ cover_db/
 
 MYMETA.*
 
-#/Loggly-*
+/Loggly-*
 loggly.ini
 loggly_old
 loggly.working
