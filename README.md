@@ -1,7 +1,7 @@
 [![Actions Status](https://github.com/localh0rst/Loggly/actions/workflows/test.yml/badge.svg)](https://github.com/localh0rst/Loggly/actions)
 # NAME
 
-Loggly - It's new $module
+Loggly - CLI app for interacting with OpenSearch.
 
 # SYNOPSIS
 

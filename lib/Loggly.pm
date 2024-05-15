@@ -5,8 +5,6 @@ use warnings;
 use OpenSearch;
 use Moose;
 use Loggly::Config;
-
-use Loggly::Test;
 use feature qw/say signatures/;
 use Mojo::IOLoop;
 use Data::Dumper;

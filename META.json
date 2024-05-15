@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "CLI app for interacting with OpenSearch.",
    "author" : [
       "localh0rst <git@fail.ninja>"
    ],
