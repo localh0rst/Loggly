@@ -1,22 +1,20 @@
 requires 'perl', '5.008001';
-requires 'App::cpanminus';
+requires 'Data::Dumper';
+requires 'Data::Format::Pretty::JSON';
+requires 'Getopt::Long';
+requires 'IO::Async::FileStream';
+requires 'IO::Async::Loop::Mojo';
+requires 'Module::Runtime';
+requires 'Mojo::IOLoop';
+requires 'Mojo::UserAgent';
+requires 'Moose';
+requires 'MooseX::NonMoose';
+requires 'MooseX::Singleton';
+requires 'OpenSearch';
+requires 'Scalar::Util';
+requires 'YAML::XS';
 
 on 'test' => sub {
     requires 'Test::More', '0.98';
-    `cpanm https://github.com/localh0rst/OpenSearch-Perl.git`;
 };
 
-Data::Dumper;
-Data::Format::Pretty::JSON
-Getopt::Long
-IO::Async::FileStream;
-IO::Async::Loop::Mojo;
-Module::Runtime
-Mojo::IOLoop;
-Mojo::UserAgent;
-Moose;
-MooseX::NonMoose;
-MooseX::Singleton;
-OpenSearch;
-Scalar::Util
-YAML::XS
