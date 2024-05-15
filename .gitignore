@@ -29,9 +29,4 @@ cover_db/
 MYMETA.*
 
 /Loggly-*
-loggly.ini
-loggly_old
-loggly.working
-.logglyrc.yaml
-loggly
 lib/Loggly/Test.pm
