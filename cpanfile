@@ -1,4 +1,4 @@
-requires 'perl', '5.008001';
+requires 'perl', '5.24.1';
 requires 'Data::Dumper';
 requires 'Data::Format::Pretty::JSON';
 requires 'Getopt::Long';

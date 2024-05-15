@@ -42,8 +42,21 @@
       },
       "runtime" : {
          "requires" : {
-            "App::cpanminus" : "0",
-            "perl" : "5.008001"
+            "Data::Dumper" : "0",
+            "Data::Format::Pretty::JSON" : "0",
+            "Getopt::Long" : "0",
+            "IO::Async::FileStream" : "0",
+            "IO::Async::Loop::Mojo" : "0",
+            "Module::Runtime" : "0",
+            "Mojo::IOLoop" : "0",
+            "Mojo::UserAgent" : "0",
+            "Moose" : "0",
+            "MooseX::NonMoose" : "0",
+            "MooseX::Singleton" : "0",
+            "OpenSearch" : "0",
+            "Scalar::Util" : "0",
+            "YAML::XS" : "0",
+            "perl" : "v5.24.1"
          }
       },
       "test" : {

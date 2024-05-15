@@ -1,5 +1,4 @@
 package Loggly::Config;
-use 5.008001;
 use strict;
 use warnings;
 use OpenSearch;
