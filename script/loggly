@@ -1,0 +1,9 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Loggly;
+use Data::Dumper;
+
+my $loggly = Loggly->new( args => \@ARGV );
+
+$loggly->run;
