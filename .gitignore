@@ -34,3 +34,4 @@ loggly_old
 loggly.working
 .logglyrc.yaml
 loggly
+lib/Loggly/Test.pm
