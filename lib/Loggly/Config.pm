@@ -14,7 +14,7 @@ use Module::Runtime qw/use_module/;
 use Data::Dumper;
 our $VERSION = "0.01";
 
-has '_cfg_file' => ( is => 'rw', isa => 'Str', default => $ENV{HOME} . "/.logglyrc_new" );
+has '_cfg_file' => ( is => 'rw', isa => 'Str', default => $ENV{HOME} . "/.logglyrc" );
 has '_args'     => ( is => 'rw', isa => 'ArrayRef' );
 has 'cfg'       => ( is => 'rw', isa => 'HashRef' );
 
