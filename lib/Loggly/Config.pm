@@ -30,6 +30,11 @@ has 'source'        => ( is => 'rw' );
 
 has 'poll_interval' => ( is => 'rw', isa => 'Int' );
 
+# TODO: Check required fields
+# TODO: Allow comma separated values for fields. i.e. --code 200,400,500
+# TODO: Allow multiple values for the same field. i.e. --code 200 --code 400
+# TODO: Put every field that is requested with --<name> into @{$fields} in the config?
+#
 sub BUILD {
   my $self = shift;
 
@@ -152,7 +157,7 @@ defaults:
   time:
     default: 1d
     type: s
-    description: Time range in seconds. Default is 1d. Results in now-1d.
+    description: Time range. Default is 1d. Results in now-1d.
   poll:
     default: 1000
     type: i
