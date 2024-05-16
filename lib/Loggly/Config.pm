@@ -34,7 +34,7 @@ has 'poll_interval' => ( is => 'rw', isa => 'Int' );
 # TODO: Allow comma separated values for fields. i.e. --code 200,400,500
 # TODO: Allow multiple values for the same field. i.e. --code 200 --code 400
 # TODO: Put every field that is requested with --<name> into @{$fields} in the config?
-#
+# TODO: Add a --debug option that will print out the query that is being sent to the source
 sub BUILD {
   my $self = shift;
 
