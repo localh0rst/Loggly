@@ -27,11 +27,11 @@ sub BUILD( $self, $args ) {
 
   # Build the Query Filter
   my $query_filter = {
-    query => {
-      bool => {
-        must => [ { range => { '@timestamp' => { gte => 'now-' . ( $time ? $time : '1h' ) } } }, ],
-      }
+
+    bool => {
+      must => [ { range => { '@timestamp' => { gte => 'now-' . ( $time ? $time : '1h' ) } } }, ],
     }
+
   };
 
   foreach my $key ( keys %{$cp} ) {
@@ -75,7 +75,7 @@ sub BUILD( $self, $args ) {
 
     }
 
-    push( @{ $query_filter->{query}->{bool}->{must} }, $query_type );
+    push( @{ $query_filter->{bool}->{must} }, $query_type );
   }
 
   my $search = $self->opensearch->search;
@@ -85,7 +85,6 @@ sub BUILD( $self, $args ) {
   $search->index($index)                                                      if $index;
 
   $self->search($search);
-
 }
 
 sub poll($self) {
