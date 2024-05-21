@@ -10,7 +10,7 @@ extends 'Mojo::EventEmitter';
 
 has 'config'       => ( is => 'ro', isa => 'Loggly::Config', default => sub { Loggly::Config->instance() } );
 has 'opensearch'   => ( is => 'rw', isa => 'OpenSearch' );
-has 'search'       => ( is => 'rw', isa => 'OpenSearch::Search' );
+has 'search'       => ( is => 'rw', isa => 'OpenSearch::Search::Search' );
 has 'search_after' => ( is => 'rw', isa => 'ArrayRef', default => sub { [] } );
 
 sub BUILD( $self, $args ) {
