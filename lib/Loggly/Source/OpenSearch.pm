@@ -78,7 +78,7 @@ sub BUILD( $self, $args ) {
     push( @{ $query_filter->{bool}->{must} }, $query_type );
   }
 
-  my $search = $self->opensearch->search;
+  my $search = $self->opensearch->search->search;
   $search->query($query_filter)->size($size)
     ->sort( [ { '@timestamp' => { order => 'asc' } }, { '_id' => { order => 'asc' } } ] );
   $search->_source( OpenSearch::Filter::Source->new->includes( @{$fields} ) ) if $fields;
