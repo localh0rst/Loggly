@@ -1,4 +1,4 @@
-packagy Loggly::Source::OpenSearch;
+package Loggly::Source::OpenSearch;
 use strict;
 use warnings;
 use Moose;
