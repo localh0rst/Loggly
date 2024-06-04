@@ -15,7 +15,7 @@ has 'search_after' => ( is => 'rw', isa => 'ArrayRef', default => sub { [] } );
 
 sub BUILD( $self, $args ) {
   $self->opensearch( OpenSearch->new( $self->config->source_config ) );
-  sels->search( OpenSearch::Search::Search->new );
+  $self->search( OpenSearch::Search::Search->new );
 
   my $time = $self->config->opts->{time} // $self->config->logconfig->{time}
     // $self->config->defaults->{time}->{default};
