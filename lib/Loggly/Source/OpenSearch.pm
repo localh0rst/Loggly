@@ -94,7 +94,7 @@ sub poll($self) {
     $self->search->search_after( $self->search_after );
   }
 
-  $self->search->execute_p->then( sub($res) {
+  $self->search->execute->then( sub($res) {
     my $last = $res->{hits}->{hits}->[-1];
     $self->search_after( $last->{sort} ) if ($last);
     $self->emit( 'messages', [ map { $_->{_source} } @{ $res->{hits}->{hits} } ] );
