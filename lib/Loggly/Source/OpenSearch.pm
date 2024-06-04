@@ -1,4 +1,4 @@
-package Loggly::Source::OpenSearch;
+packagy Loggly::Source::OpenSearch;
 use strict;
 use warnings;
 use Moose;
@@ -15,6 +15,7 @@ has 'search_after' => ( is => 'rw', isa => 'ArrayRef', default => sub { [] } );
 
 sub BUILD( $self, $args ) {
   $self->opensearch( OpenSearch->new( $self->config->source_config ) );
+  sels->search( OpenSearch::Search::Search->new );
 
   my $time = $self->config->opts->{time} // $self->config->logconfig->{time}
     // $self->config->defaults->{time}->{default};
@@ -78,7 +79,7 @@ sub BUILD( $self, $args ) {
     push( @{ $query_filter->{bool}->{must} }, $query_type );
   }
 
-  my $search = $self->opensearch->search->search;
+  my $search = $self->search;
   $search->query($query_filter)->size($size)
     ->sort( [ { '@timestamp' => { order => 'asc' } }, { '_id' => { order => 'asc' } } ] );
   $search->_source( OpenSearch::Filter::Source->new->includes( @{$fields} ) ) if $fields;
